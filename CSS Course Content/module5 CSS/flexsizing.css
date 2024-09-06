@@ -1,0 +1,41 @@
+#container {
+    height: 600px;
+    width: 80%;
+    background-color: white;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+   
+}
+
+#blue {
+    flex-basis: 400px; /* flex- basis kisi bhi indivisual div ko uski initial size ke according or jyada km size krna*/
+}
+
+h1 {
+    text-align: center;
+}
+
+#container div {
+    height: 100px; 
+    width: 300px;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 1.5em;
+}
+/* flex-grow ====iska kaam hai jab container ke ander khali space rah jata hai usme kisi bhi indivisual div ki agar hum size badhana
+chahe us space ko cover krne ke liye to hum flex-grow ka use krenge jisse div ki size ko 1,2,3...time bada kar skte hai "usi direction 
+me jis direction me content div set hai" dusre div k comparision me*/
+/* or sath hi hum ek limit bhi set kr skte hai " max-width: 400px" isse uski size max 400px tk hi grow hogi usse aage nhi*/
+
+/* flex-grow: 1; == syntex 
+   max-width: 400px
+*/
+
+/* flex-shrink: 1 /* yah bhi same grow ki trah hi hai bs ye size ko kam kr deta hai yaani agr hmaare container ka size chhota h
+or div jitne hai vo set nhi ho pa rhe overflow kr rhe hai to jis indivisual div pr humne flex-shrink lagaya hai 1,2,3,4...
+jitne bhi gunna utna hi shrink km size ho jayega jisse baaki div us space me set ho jayeenge*/

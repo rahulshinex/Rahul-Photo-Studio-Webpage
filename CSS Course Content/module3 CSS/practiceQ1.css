@@ -1,0 +1,29 @@
+/* Q.1 create a traffic light diagram 
+use == outer div than 3- divs inside it in sibling relation
+set - height 200px width 70px and border 2px solid black color for == outer div.
+set - height 50px width 50px and border 2px solid black color for == inner divs than set margin 10px.
+at last make inner divs circuler like light with red yellow green */
+
+#outer {
+    height: 200px;
+    width: 70px;
+    border: 2px solid black;
+}
+.inner {
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 50%; /* yha un light box ko square se gol bnaane ke liye radius 50% kr di */
+}
+ #red {
+    background-color: red;
+ }
+
+ #yellow {
+    background-color: yellow;
+ }
+
+ #green {
+    background-color: green;
+ }

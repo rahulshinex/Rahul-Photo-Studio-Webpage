@@ -1,0 +1,133 @@
+* {
+    font-family: "Courier New";
+  }
+  /*universel selector ==" * { background color: red;}" - it will apply on whole documents.*/
+  h1, h3 {
+    color: #b92b27;
+  }
+  /*when we wants to apply same property on multiple selectors like that - h1 , h3 { color: #b92b27;}*/
+  #login {
+    background-color: white;
+  }
+  /* id selector use " #myid { } */
+  #signup {
+    background-color: #b92b27;
+    color: white;
+  }
+
+  .upvote {
+    background-color: greenyellow;
+    color: red;
+    /* class selector use*/
+  }
+  #myid p {
+    color: blue;
+  }
+  /*Ques) set the colour paraghraph inside divs with the id="myid" to blue
+  ans= two ways to write css like this = "#myid p { color:blue;}" and "div [id="myid" p { } ]"*/
+  p a {
+    color: purple;
+    background-color: yellow;
+  }
+  /*descendant selectors*/
+  /* in this example humne sirf paragraph k ander vale anchor tag ka color or background color change kiya hai agr hum 
+  only "a" ko select krte to jaha jaha bhi anchor tag "a" hai sbka change ho jata */
+
+  nav ul li a {
+    color: indigo;
+  }
+/* multiple level descendant selectors == "nav ul li a" */
+
+p + h3 {
+  text-decoration: ;
+}
+/*adjacent sibling combinator = jab bhi do selector same level or ho jaise p and h3 same or hai sibling relation hai na ki 
+parent child kyuki h3 just p ke baad aa rha hai same level pr isliye p + h3 mtlb p ke baad jaha bhi h3 aa rha hai isko underline */
+/* example */
+
+.upvote + button {
+  background-color: blueviolet;
+}
+/* yaha humne jo bhi upvote button k baad answer button aa rhe the unka color change kiya hai kyuki upvote button ko humne already 
+class de rkhi thi
+isliye usi ka use krke uske aage vale answer button ka background color change kr diya*/
+
+div > input {
+  background-color: aqua;
+}
+/* this is child combinatpr == iska matlb ye sirf ek level tk hi apply kr skta hai jaise input div ka child hai isliye div > input ye
+kane se input ka background change ho jayega iska disadvantage ye hai ki ye sirf ek level tk div ka child input tk hi apply hoga
+agr yha ek or selector hota jaise input k ander li to div > li applicable nhi hota isliye mostly hum  multiple level descendant 
+selectors == "nav ul li a" iska use krte hai isko kahi se kahi tk bhi use kro jaise " nav a" direct bhi a ka color change hoga baaki
+beech k relation show na krne pr bi*/
+
+input[type="text"] {
+  color: red;
+}
+/* attribute selector == isme hum kisi bhi particuler element k ander jo attribute hai jaise text ya password uska property 
+color change kr skte hai */
+input[type="password"] {
+  color: green;
+}
+
+button:hover {
+  background-color: black;
+  color: aqua;
+}
+/* pseudoclass to hover on text and change the color */
+h3:hover {
+  text-decoration: overline;
+}
+button:active {
+  background-color: crimson;
+}
+/* jab kisi bhi button ya selector paragraph text pr click krne k baad uska color change yaani ab vo active state me hone k baad 
+color change krenge*/
+
+/* important note-- hover active button selector par use krne k baad bi login or sign up vale button me koi changment nhi hua
+kyuki unke liye already id  " #login { background-color: white; } " select hai
+@@@@@ id > claas > element @@@ ..id ki specificity always class se strong hoti hai or class ki element se iska mtlab ye hai ki 
+login or signup ki already id se humne background color uper select kr diya tha tha dobara jab humne button hover me background
+sabka change kiya to button hover ki specificty id ki spec se km hai "id speci= 1,1,0 yaani 100 hai" jabki button:hover ki
+0,1,1 yaani 11 hai isliye login ka signup ka colour yu ka yu hai jabki unke text color change ho gye kyuki id me bg color hi 
+select tha*/
+
+input[type="radio"]:checked + label {
+color: red;
+font-weight: bold;
+}
+
+div:nth-of-type(1n) {
+  background-color: chartreuse;
+}
+/* nth-of-type important hai jab bhi hame ek sath bahut saare type k selectors par property apply krni ho jaise isme div jaha jaha
+selector hai uske ander k part 1n yaani lgaatar sequance me green ho gye ... jabki 2n karte hi ..har dusra yaani tatal n div me pahla 
+chood kar fir dusra fir agla chhod k dusra...3n me phla dusra div chhod k sidha tisre ka color green hoga aaise hi aage sewuance*/
+
+/* pseudo elements */
+
+h1::first-letter {
+  color: blue;
+}
+/* jaha jaha bhi page me h1 hogi sabke first letter ka color change ho jayega*/
+
+p::first-line {
+  color: rgb(235, 10, 6);
+}
+/* paragraph ki first line color change jitne bhi paragraph tag me honge*/
+p::selection {
+  background-color: rgb(229, 144, 18);
+}
+/* selection means jab bhi kisi line ko hum mouse cursor ki help se select kre to different color aaye by default sky blue hota hai*/
+/* selector specificity === id > class > element ...specificity check krne k liye kisi bhi selector ki css per hover krne per dikhti
+jyada information k liye video number 15 css part 2 folder per jaaye*/
+
+/* agar specificity same aaye kisi bhi same selectors ki to last me jo update huyi hai ya likhi gyi hai vhi apply hogi
+example ==1. h1 { color:red: } .... 2. h1 { color:blue:} ===es case me las me jo update 2. no vali blue huyi hai yhi apply hoga*/ 
+
+/* inline css ki priority hamesa 1st no pr hoti hai agr humne kisi bhi element ya selectors k liye inline css vhi html file me likh
+di ab chahe css style file me uski change krne per bhi kuch nhi hoga isliye inline css ka bilkul use nhi krte kyuki ek baar jo 
+property set kr di kr di ab change vhi krne se hoga html sheet me*/
+
+/* !important jaha bhi property k last me likh diya ab use koi change nhi kar skta 
+example== h1 { color:red; !important } ab mhi hoga iska kitni bhi aage specificity vali bhi apply nhi hogi */

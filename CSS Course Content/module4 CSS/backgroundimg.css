@@ -1,0 +1,10 @@
+div {
+    color: white;
+    background-color: burlywood;
+    height: 200px;
+    width: 400px;
+    margin: 10px auto;
+    background-image: url(treeimg.jpg);
+    background-size: cover; /* contain, cover, auto == ye teeno size use kr skte hai but mostly cover use hota hai..contain me image
+    cut ho hoke kyi hisso m repeat ho jaati hai */
+}

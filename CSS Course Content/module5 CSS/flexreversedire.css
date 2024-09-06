@@ -1,0 +1,30 @@
+
+#container {
+    height: 300px;
+    width: 80%;
+    background-color: white;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row-reverse; /* ulta ho gya ab box content ka arrangment*/
+    /* MOsT important== 1. agar hume content ko right side se suru krvana hai phle means reverse ho jaye ( matlb= box7- box6
+    -box5......... to hum flex-direction: row-reveserse; kr denge agr top to bottom reverse chaiye to column-reverse kr denge.
+
+      2. agar content main axis mtlb ki content top se bottom yaani vertical m set hai 7 div to uska main axis column hoga or cross
+      axis row hoga agr content left to right direction me yaani horizontal row me hai phle se to main axis row or cross column hoga.
+
+      3. please check flexboxdirection img in ccs module 5 folder*/
+}
+
+h1 {
+    text-align: center;
+}
+
+#container div {
+    height: 100px; 
+    width: 300px;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 1.5em;
+}
+

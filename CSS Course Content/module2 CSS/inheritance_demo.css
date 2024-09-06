@@ -1,0 +1,19 @@
+div {
+    background-color: yellow;
+}
+/* yaha main parent div hai agr uska color yellow kr diya to sabka ho gya bs input or button ko chhod kar niche vale sabhi child jo 
+div parent ke niche aate hai inheritance k according color chhange ho jayaga*/
+form {
+    background-color: red;
+}
+/* ab yaha isme form ko humne red color alg se diya to form jitna space le rha hai sab red ho gya but ab hi input or button nhi huye*/
+
+input {
+    background-color: inherit;
+}
+button {
+    background-color: inherit;
+}
+/* input or button dono ko inherit yaani purvajo virasat k according background color set krte hi ho gya inherit k according chlne
+ka nirdesh diya isliye red ho gya apne se uper vale k according agr me form ka color hta du to input or button dono ka color
+div grandparent k according yellow ho jayega*/

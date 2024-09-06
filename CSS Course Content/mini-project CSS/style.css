@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_box {
+    height: 100vh; /* main ox ko poore page per set krne k liye viewport hight 100vh*/
+    background: url(studio.jpg);
+    background-size: cover; /* img ne poore page ko cover kr liya*/
+}
+
+.btn_one i {
+    color: white;
+    font-size: 30px;
+    font-weight: 700; /* gahra karne k liye ==range between 100-900*/
+    position: absolute; /* absolute yaani parent k according jo ki main box hai */
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.sidebar_menu {
+    position: fixed;
+    left: -350px; /* -350px isliye diya left se taaki vo left ki traf page se bahr chla jaaye dikhe na but jaise hi button one pr 
+    click kre to vps aayega aage abhi k liye gayab*/
+    height: 100vh;
+    width: 300px; /* side me 300px tk ki width cover krega slidebar menu*/
+    background-color: rgba(255, 255, 255, 0.1); /* opacity 0.1 se ye halka sa dikhega bg image k uper jisse glass ka jaisa color*/
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s linear;
+
+}
+
+.sidebar_menu .logo {
+    position:absolute; /* logo jo ki ek div hai jisme rahul photo studio likha hai us div ki position uske parent jo ki sidebar menu h usi k anusaar change hogi*/
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5); /* rgba color ki alpha value 0.5 kr di shadow halke color ki chaiye isliye*/
+    
+}
+
+
+.sidebar_menu .logo a {
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none; /* rahul photo studio ke niche underline ko htaane k liye*/
+    font: 20px; /* jo logo div k ander rahul photo studio h uska font size*/
+    font-weight: 500;
+
+}
+
+.sidebar_menu .btn_two i {
+    color: grey;
+    font-size: 25px;
+    line-height: 60px;
+    position: absolute; /* btn_two k div k ander jo icon h uski position saari property parent sidebar menu k according change hogi*/
+    left: 275px;
+    cursor: pointer; /*jb cursor leke jaaye btn_two pr to cursor ki shape hand me ungli finger shape me change*/
+    opacity: 0;
+     /* kyuki starting me ye gayab rhega jaise hi check box pr click hoga yaani sidebar pr to menu khulegi or tb ye dikhna
+    chaiye close krne ke liye sidebaar ko*/
+    transition: all 0.3s linear; /* jo sidebar h vo dheere se side slide ki trah 3 sec me khule*/
+}
+
+.sidebar_menu .menu {
+    position: absolute; /* menu ki position parent side_menu k according change hogi*/
+    top: 80px;
+    width: 100%;
+    
+}
+
+.sidebar_menu .menu li {
+    margin: 10px; /* chaaro traf se 10px ka margin yaani 10px top-bottom left-right center me jayega*/
+    padding: 14px 50px; /* menu ke list item ki padding yaani top-bottom 14px or left-right 50px*/
+}
+
+.sidebar_menu .menu i, a {
+    color: white;
+    font-size: 20px; /* menu k ander icon ke ander jo anchor */
+    text-decoration: none;
+}
+
+.sidebar_menu .menu i {
+    padding-right: 8px; /* icon jaise gallary ka icon with name aage gallary k beech me gap*/
+}
+
+.sidebar_menu .social_media {
+    position: absolute; /* parent ke according position change hogi jo ki sidebar_menu hai jiski width 300px hai*/
+    left: 25%; 
+    bottom: 5%;
+}
+
+.sidebar_menu .social_media i {
+    color: white;
+    opacity: 0.5;
+    padding: 5px;/* ek dusre ke beech me 5px ka gap ban jaaye icon ke*/
+}
+
+#check {
+    display: none; /* check box uper jo corner me left side dikhta vah na dikhe*/
+}
+
+.sidebar_menu .menu li:hover {
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);/*jab sidebar menu me jo menu h usme list item pr hover krne pr shadow*/
+}
+
+.sidebar_menu .social_media i:hover {
+    opacity: 1;
+    transform: scale(1.2); /* social_media icon ki opacity 1 ho jaye jo phle 0.5 thi hover krne pr sath me size bhi increase*/
+}
+
+.btn_one i:hover {
+    font-size: 40px;
+}
+
+.btn_two i:hover {
+    font-size: 30px; /* btn_two ke i= icon pr hover krne pr font size 30px ho jaye jo phle 25px thi */
+}
+
+/*Very Important ====*/
+
+#check:checked ~ .sidebar_menu {
+    left: 0;
+}
+/* condition jab check box per click ho checked ho to uska sibling relation me jo sidebar menu hai pura vo left side se 0 position
+aa jaye jo pahle -300px ki vjh se gayab tha page se*/
+#check:checked ~ .btn_one i {
+    opacity: 0;
+}
+/* jab box checked ho to btn_one gyab ho jaye opacity 0 ki vjh se dikhe na yaani button one pr click krte hi check box checked 
+hoga than opacity 0 ho jayegi or vah nhi dikhega*/
+#check:checked ~ .sidebar_menu .btn_two i {
+    opacity: 1;
+}
+/* condition jaise hi checked hoga box jo btn_two jiski opacity phle 0 thi uski 1 ho jayegi jisse vo dikhega cross mark k sath*/

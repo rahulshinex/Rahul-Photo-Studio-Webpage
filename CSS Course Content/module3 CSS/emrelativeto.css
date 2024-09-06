@@ -1,0 +1,50 @@
+#outer {
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
+    background-color: aqua;
+    font-size: 10px;
+}
+
+#inner {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    background-color: red;
+    font-size: 2em;
+    padding: 1em;
+}
+
+/* em always font size k relative change hota hai em relative just apne se uper vale k according size ya value change krta hai yaani isme paranet div me font size= 10px hai
+inner me div me 2em ka mtlb double 10x ka yaani inner outer k according relation le gya but ab aage padding inner ki inner ke hi
+upper relation font-size 2em k according chlegi yaani aage aane vale sabhi property thik apne se uper vale k according change hoga */
+
+button {
+    font-size: 50px;
+    border-radius: 20px;
+    border: 5px solid black;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/* yaha humne padding-left or right me 10px ya 20px ki jgah em use kiya jisse ki padding ki size font size 50px k according change 
+hogi iska fayda ye hota hai jab bhi hum future me font ka size increase ya decrease krnge to uske according padding bhi adjust hoti
+rhegi na ki badi chhoti dikhegi */
+section {
+    font-size: 15px;
+}
+
+div {
+    font-size: 2em;
+}
+/* snowball effect size ek se aage ke double hota ja rha hai 2em  but hume krna hai ki main section k according root k according
+sbka set ho change ho isliye use krenge" rem " ka */
+
+section {
+    font-size: 20px;
+}
+
+div {
+    font-size: 2rem;
+}
+/* ab isme sab elements ka size section root se double ho jayega */

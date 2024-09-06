@@ -1,0 +1,37 @@
+#container {
+    height: 300px;
+    width: 80%;
+    background-color: white;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* iska mtlb sara content row me left se right ki direction me set ho jayega space sara khtm kr dega
+    sbhi content k beech ka or ye hum alag alag direction k liye bhi use kr skte hai jaise 
+    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+    flex-direction: column;
+    flex-direction: row;
+    "most imp :: en sab me justify-content: flex-start/flex-end or End bhi kr skte hai"
+    */
+}
+
+h1 {
+    text-align: center;
+}
+
+#container div {
+    height: 30px; 
+    width: 100px;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 1.5em;
+}
+/*
+justify-content: space-between;
+justify-content: space-evenly;
+justify-content: space-arround; 
+*/
+
+/* justify-content: space-between; aaisa karne se har ek box k beech me space aa jayega jo har box ki size total or container
+ki size me minus karne pr bacha hua tha "pahle khtm ho gya tha justify-content: flex-start or center karne se */

@@ -1,0 +1,63 @@
+/* position means element poore web page me kaha set hai uski position kya iske liye hum ===left-right, top-bottom proprties
+ka use krnege or position basically 4 type se set krenge == static , relative, absoulute, fixed */
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border: 3px solid black;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+#static {
+    background-color: yellow;
+    position: static;
+    top:100px;
+    left:100px; /* koi changment nhi hoga yellow box ki position me just because of static position*/
+}
+/*static position vah hoti hai jo by default phle se set rhti hai isme hum change krenge to koi frak nahi pdega*/
+
+#relative {
+    background-color: yellow;
+    position: relative;
+    top:100px;
+    left:100px;
+}
+/*relative position 100px top or left dene se box ki position jaha thi phle vaha se 100px top se niche ki traf or left se
+right ki traf khisak gya yaani khud ki hi position itself ke according change hota hai */
+
+#absolute {
+    background-color: red;
+    position: absolute;
+    top:100px;
+    left:100px;
+}
+/* absolute position hamesa element apne se uper vale yaani parent ke according offset change krta hai or agar parent ki khud
+ki koi position koi offset(left-right, top-bottom px) na ho to fir element direct main web page ke according apni position 
+set krta hai jaise uper absolute vale box ne left or top se 100px main page k according set kiya na ki section jo iska parent
+hai uski koi position hai hi nahi isliye or div iska sibling hai na ki parent*/
+
+/* most important jab humne div -absolute 3 create kiya to uski position absolute 2 phle jaha tha vha le li gyi iska matlb
+ye hua ki absolute position kisi bhi element ki jo final ho gyi vhi rhegi phle vali k liye koi uska space nhi rkhega ki vps
+aayega div uski jgah absolute 3 le lega but relative me jo space rah gya vah khali hi rhega agla aane vala uski jgah nhi le
+skta*/
+
+#fixed {
+    background-color: blue;
+    position: fixed;
+    top:200px;
+    left:200px;
+}
+/* fixed position me position element ki fix ho jati hai kitna bhi scroll kr lijiye vo vhi fix rhega mostly website me nap bar 
+ko fix krne k liye es position ka use kiya jata hai or fixed position bhi main page (viewport) k according apni jgah set krti hai*/
+
+#sticky {
+    background-color: black;
+    position: sticky;
+    top:300px;
+    left:100px;
+    color: aliceblue;
+}  
+

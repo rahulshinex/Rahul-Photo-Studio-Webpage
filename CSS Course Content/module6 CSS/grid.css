@@ -1,0 +1,60 @@
+/* Grid== grid ka use basically 2d layouts yaani two dimensional layout jisme multiple rows or column hote hai graph ki trah 
+krke usme items ko alag alag box me place karna ho matlab jaha hume rows or column ke format me data chaiye vha grid ka use krte 
+hai or only rows me ya only column me data chaiye to flexbox or yah grid webpage ko responsive bhi banati hai flexbox ki trah hi same*/
+
+.container {
+    width: 600px;
+    height: 300px;
+    background-color: yellow;
+    display: grid;/* same like flex lekin isme grid krte hi box vertical me ek certain space k sath set ho gye*/
+    grid-template-rows: 50px 50px 50px 50px; /* yaha 4 baar 50px isliye likha kyuki humne 4 track rows ki direction me bnaye hai 
+    yaani 50-50px k 4 track  ban jayenge uske baad jo bhi space bahega vo container apne hisaab se adjust kr lega
+     === hum yaha chahe jitne items 
+    requirements k hisaab se or bhi track create kr skte hai*/
+    grid-template-columns: 100px 100px 100px 100px; /* ye same column ki direction me 4 track banane ke liye es trah se ek table type
+    excel sheet ban gyi hai*/
+    row-gap: 10px;
+    column-gap: 10px; /* rows or columns k becch gap dene ke liye  also can use== grid-gap: 10px for both */
+   
+}
+/* items grid me automatically set ho jaate hai rows or columns jo grid me bannti hai*/
+
+.one {
+    grid-column-start: 1; /* iska matlab ki item ko kis column se kis column tk last set krna hai rkhna hai same row me bhi */
+    grid-column-end: 3; /* or agar hume column ki width or height set kr rkhi hai jo ki only 1st box k barabar hi hai to aage 
+    ke 2 box khali agr reserved krne hai same" one " column k liye to vo besak khali rhenge but dusre koi item nhi aa skte fir
+    dusre or tisre column me */
+
+   /* very imp: grid-column: 1/3; es trike se bhi likh skte hai 1= starting column 3=end*/
+}
+
+.four {
+    grid-row: 2/4; /* yaani ab item four row no 2 se 4 tk space le lega*/
+}
+
+.items {
+    /* width: 100px;
+     height: 50px; /* agr hum ye width or height items ki remove bhi kr de to each item alg alg box me frid k hisaab se jayega */
+     background-color: green;
+     border: 2px solid black;
+     text-align: center;
+}
+
+/*Grid Container: The element on which display: grid is applied. It becomes a grid container, and its children become grid items.
+
+Grid Items: The direct children of the grid container. These items are placed into the grid's defined structure.
+
+Grid Lines: The horizontal and vertical lines that divide the grid into sections (columns and rows).
+
+Grid Tracks: The space between two grid lines. Grid tracks can be columns or rows.
+
+Grid Cells: The space between four grid lines. A grid cell is the smallest unit on the grid.
+
+Grid Areas: Rectangular spaces that consist of one or more grid cells. You can define a grid area and place grid items within it.*/
+
+/*grid-template-rows: repeat(4, 1fr); yaha 4 ka mtlb 4 track yaani 4 rows likhte hi 4 rows repeat krke track ban jayenge.
+ grid-template-columns: repeat(3, 1fr); 1fr means container ki jo total 100 % width ya height hai uske 1fr ko repeat krna hai */
+
+ /* MOST IMPORTANT === jab bhi hum grid ya flexbox create krte hai to ye dono block item hone ki vjh se se horizontally hum inke aage
+ usi row me koi dusra element nahi show kr skte jaise grid layour k aage row me hi paragrapgh dikhana ho newspapers ki trah to
+ humne display: inline-grid or display: inline-flex " krna hoga jisse grid or flex dono inline ban jaate hai ek hi horizontal line me*/

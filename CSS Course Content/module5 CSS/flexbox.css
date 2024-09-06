@@ -1,0 +1,43 @@
+/* flexbox basically ek container hi hota hai vah ek div bhi ho skta hai span bhi ho skta hai jisme hum content ko ek best tarike 
+se set kr skte hai layout ka use krke unki position or most important website ko responsive banane k liye flexbox ka use hota hai
+jab bhi hum alag alg device me website open krte hai to text or content img idher udher disorder ya arrangment khraab na ho*/
+
+/* kisi bhi element ko ya div ko flexbox bnane k liye uski display property me flex likhne se vah ek flex container ya box ban jata
+hsi or usme jitne bhi content honge chahe vo usme aa hi nhi rhe ho lekin vo unhe by default adjust kr leta hai */
+
+#container {
+    height: 300px;
+    width: 80%;
+    background-color: white;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column; /* by default ye row hi rhta h mtlb centent ek row me set hote chle jayenge but humne ab column kr diya 
+    isliye saare box hume vertical direction me ek k baad ek dikhayi de rhe hai*/
+
+    /* MOsT important== 1. agar hume content ko right side se suru krvana hai phle means reverse ho jaye ( matlb= box7- box6
+    -box5......... to hum flex-direction: row-reveserse; kr denge
+
+      2. agar content main axis mtlb ki content top se bottom yaani vertical m set hai 7 div to uska main axis column hoga or cross
+      axis row hoga agr content left to right direction me yaani horizontal row me hai phle se to main axis row or cross column hoga.
+
+      3. please check flexboxdirection img in ccs module 5 folder*/
+}
+
+h1 {
+    text-align: center;
+}
+
+#container div {
+    height: 100px; 
+    width: 300px;
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 1.5em;
+}
+ /* uper container ki height 300px hai or humne ander vale div ki height 100px kr di es hisab se to container
+    me 3 hi div aane chaiye the but container ne flex property ki help se 7 div ko adjust kr liya ye hi benift hota hai jab website 
+    alag alag device me dekhte hai to content flexbox se bahr ya idher udher nhi jata usi me set rhta hai chahe screen size chhota
+    bda kyu na kar le es case me content ki height width ignore ho jaati hai flexbox apne size k according saara content adjust
+    kar leta hai isliye website responsive dikhti hai */
+    

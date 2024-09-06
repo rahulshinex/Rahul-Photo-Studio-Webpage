@@ -1,0 +1,19 @@
+/* Transition-timing-function effect */
+div {
+    height: 100px;
+    width: 100px;
+    background-color: greenyellow;
+    margin: 0 auto; /* center me karne k liye*/
+    margin-top: 10px;
+    transition: margin-top;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.2s;
+    /* en sabhi transition properties ko ek sath bhi likh  skte hai ==== jise transition shorthand kahte hai
+    " transition: margin-top 2s ease-in-out 0.2s; " */
+}
+
+div:hover {
+    background-color: brown;
+    margin-top: 400px; /* yaani box per hover krne pr box niche 400px chla jayega tbhi box ka margin to se 400px hoga*/
+}

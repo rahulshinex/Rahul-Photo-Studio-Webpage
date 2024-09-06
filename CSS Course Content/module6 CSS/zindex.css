@@ -1,0 +1,28 @@
+.box {
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+    background-color: pink;
+}
+
+.one {
+    background-color: aquamarine;
+    position: relative;
+    z-index: 1; /* yaha vaise to one ka z-index =0 auto hai or vo two k niche hai but hum isko two k uper
+    bhi dikha skte hai agr hum iska z-index=1 kar de to two ka by default z-index=0 hoga isliye 1>0 to one uper show hoga but
+    pahle hume iski position default se hatani hogi isko hum relative kr dete hai fir changment dekhte hai */
+}
+
+/*most imp== agr kisi bhi element ki koi bhi position nhi set kr rkhi iska mtlb uski default set hai " default or static position "
+pr kabhi bhi z-index apply nhi hota*/
+.two {
+    background-color: darkgoldenrod;
+    position: relative;
+    bottom: 50px;
+}
+/* z-index basically element ki position btane ke liye use hota hai jaise yha es case me .two vala 2 no box 1 no box ke uper overlap kar
+rha hai jiski yaani 2 no 1 no k uper hai isliye uska z-index 1 hoga jabki one vale ka 0 by default sabhi elements ka z-index=0 auto 
+hota hai lekin hum ye change kr skte hai but condition ye hai ki us element ki "" position static or default "" na ho bs jis 
+element ka z-index jitna jyada hoga yaani positive hoga 
+vo sbse uper hoga 0..1..2...3..4..5 esme sabse uper 5 z-index vala hoga or sabse minus vala sabse niche hoga to zab bhi kisi element 
+ko uper niche dikhana ho ek dusre k z-index ki help se kr skte hai*/

@@ -1,0 +1,45 @@
+.container {
+    margin: 0; /* full page per set krna hai isliye koi margin nhi hai main container div ka */
+    padding: 0;
+    height: 100vh;
+    display: grid; /* viewport height 100 krne se full screen pr poore page ko cover kr lega uper se niche tk*/
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+}
+
+.container div {
+    background-color: yellow;
+    font-size: 1.5em;
+    text-align: center;
+    border: 2px solid black;
+
+}
+
+.header {
+    grid-column: 1/ span 12;
+}
+
+.slidebar {
+    grid-column: 1/ span 3;
+    grid-row: 2/ span 10;
+}
+
+.navigation {
+    grid-column: 4/ span 6;
+}
+
+.ads {
+    grid-column: 10/ span 3;
+    grid-row: 2/ span 10;
+}
+
+.main {
+    grid-column: 4/ span 6;
+    grid-row: 3/ span 9;
+}
+
+.footer {
+    grid-column: 1/ span 12;
+}
+

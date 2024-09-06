@@ -1,0 +1,42 @@
+/* Display property ka use krke hum inline element ko block or block ko inline bna skte hai*/
+h1 {
+   display: inline; 
+   background-color: pink;
+}
+span {
+    display: block;
+    background-color: greenyellow;
+}
+
+/* important note=== span yaani inline elements k liye height width padding margin hamesa left- right me hi change hoti hai baaki
+top bottom me koi fark nahi pdta yaani ki example k liye agar hum ek paragraph k ander beech me kahi ,span></span> tag use kre usme
+kuch bhi text ya content likhe to uski text ki span tag vale ki agr margin padding width height left right ki hi kam jyada hogi
+top bottom ki nahi 
+inline elements ====
+# Do not accept width and height CSS properties
+#Margins will work horizontally, but not vertically
+#Padding works on all sides, but the top and bottom may overlap other elements.
+
+block elements====
+accept every property 
+*/
+div {
+    height: 200px;
+    width: 300px;
+    background-color: greenyellow;
+    border: solid black;
+    margin: 10px;
+    /* ab hum chahte hai ki sabhi div box ek line me aa jaye horizintal me isliye isko display ki help se inline element bnaane ki
+    kosis krte hai jo ki fail ho jayegi kyuki inline element pr saari css property apply nhi hoti jaise margin width height 
+    ye sab ek line me to aa jayenge teeno div but structure shape bigad jayegi
+    display: inline (not working ) fail
+    isliye ye use krenge- display: inline-block ---working pass */
+    display:inline-block;
+}
+/* display: none ka use krke hum kisi bhi element ko gayab bhi kr skte hai jaise ....sheet me last vale div ko id de 
+dete hai "gayab" ki fir likhte hai css aaisa krne se se tisra div element final page me gayab ho jayega inspect krke 
+display none ko off krna hoga tb dikhega*/
+
+#gayab {
+    display:none;
+}

@@ -1,0 +1,51 @@
+
+section {
+    margin-top: 100px;
+}
+
+div {
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: rgb(6, 201, 6);
+    border: 2px solid black;
+    margin: 10px;
+}
+
+div:nth-of-type(2n) {
+    background-color: rgb(139, 83, 14);
+}
+
+div:nth-of-type(3n) {
+    background-color: rgb(203, 191, 56);
+}
+/* transform rotate with degree angle*/
+
+#one {
+transform: rotate(45deg); /* oposite direction me rotate krne k liye minus - lga de -45deg" */
+}
+
+/* transform scale -- size badhane or kam krne ke liye */
+
+#two {
+    transform: scale(0.5) /* yha humne main size se 0.5 aadhi kr di size*/
+}
+/* transform scale -- alag alag direction k liye size km jyada krna jaise X- direction m increase krna ya Y me krna */
+
+#three {
+    transform: scale(0.5, 2); /* yha X direction me to aadha ho gya Y me double */
+    /* transform: scaleX(1.5) isme kewal X direction ki 1.5 increase hogi Y ki nahi hogi*/
+}
+
+/* transform : translateX(50px) === transform : translateY(100px) == yaani jb bhi element ko ek jgah se dusri jgah alag alag
+direction me move krvana hota hai tb iska use krte hai yaani postion change ho jayegi*/
+
+#four {
+    transform: skew(30deg)
+}
+/* skew krne se element kheech jata hai shape change */
+
+#five {
+     transform: rotate(50deg) translateX(100px) scale(1.5);
+}
+/* sabhi transform ki properties ek sath apply kr di humne */
